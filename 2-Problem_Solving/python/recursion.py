@@ -21,3 +21,20 @@ def factorial(num):
 
 print(factorial(4)) # 24
 print(factorial(10)) # 3628800
+
+
+
+def collect(arr):
+  list = []
+
+  def helper(listing):
+    if (len(listing) == 0): return
+    if (listing[0] % 2 != 0): list.append(listing[0])
+
+    return helper(listing[1:])
+
+  helper(arr)
+  return list
+
+
+print(collect([1,2,3,4,5,6,7,8,9,10]))

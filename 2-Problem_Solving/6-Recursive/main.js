@@ -44,3 +44,21 @@ const factorial = (num) => {
 
 console.log(factorial(4)); // 24 === 4!
 console.log(factorial(10)); // 3628800 === 10!
+
+// HELPER RECURSION
+const outer = (arr) => {
+  const list = [];
+
+  function helper(listing) {
+    if (listing.length === 0) return;
+
+    if (listing[0] % 2 !== 0) list.push(listing[0]);
+
+    return helper(listing.slice(1));
+  }
+
+  helper(arr);
+  return list;
+};
+
+console.log(outer([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
