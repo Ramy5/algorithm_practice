@@ -38,3 +38,17 @@ def collect(arr):
 
 
 print(collect([1,2,3,4,5,6,7,8,9,10]))
+
+
+def pure_recursion(arr):
+  new_array = []
+  
+  if (len(arr) == 0): return new_array
+  
+  if (arr[0] % 2 != 0): new_array.append(arr[0])
+  
+  new_array = new_array + pure_recursion(arr[1:])
+  
+  return new_array
+
+print(pure_recursion([1,2,3,4,5,6,7,8,9,10]))
