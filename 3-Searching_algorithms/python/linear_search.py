@@ -1,7 +1,7 @@
 def linear_search(list, val): 
-  for num, index in list: 
+  for num in list: 
     if num == val: 
-      return index
+      return list.index(num)
 
   return -1
 
